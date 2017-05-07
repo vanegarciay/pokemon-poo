@@ -20,6 +20,7 @@ function Pokemon(nombre,color, poderDeAtaque){
     }
 }
 
+
 const Pikachu = new Pokemon("Pikachu", "Amarillo", 100);
 const Charmander = new Pokemon("Charmander","Rojo",20);
 const Squirtle = new Pokemon("Squirtle", "Azul", 50);
@@ -31,6 +32,28 @@ const Staryu = new Pokemon("Staryu", "Cafe", 80);
 const Oddish = new Pokemon("Oddish", "Uva", 40);
 const Onix = new Pokemon("Onix", "Gris", 90);
 
-Pikachu.atacar(Charmander);
+var pokemones = [Pikachu,Charmander,Squirtle,Bulbasaur,Butterfly,Mew,Jiglypuff,Staryu,Oddish,Onix];
+var selectPokemon1 = document.getElementById("pokemon1");
+var selectPokemon2 = document.getElementById("pokemon2");
 
-console.log(Charmander.vida);
+
+for(i=0; i<pokemones.length; i++){
+    var option = document.createElement("option");
+    option.text = pokemones[i].nombre;
+    option.value = pokemones[i].nombre;
+    selectPokemon1.add(option);
+}
+
+for(i=0; i<pokemones.length; i++){
+    var option = document.createElement("option");
+    option.text = pokemones[i].nombre;
+    option.value = pokemones[i].nombre;
+    selectPokemon2.add(option);
+    
+}
+
+
+
+//Pikachu.atacar(Charmander);
+
+//console.log(Charmander.vida);
