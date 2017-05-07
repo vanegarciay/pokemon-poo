@@ -3,18 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <title>Pokemons</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <style type="text/css">
+        html, body, table, tr, td, input, select {
+            font-family: 'Indie Flower', cursive;
+        }
+        html {
+            margin: 0;
+            padding: 0;
+            width: 98%;
+        }
+        body {
+            width: 100%;
+            text-align: center;
+            background: #fff7d1;
+        }
+        #logo { 
+            width: 300px; 
+        }
+        table {
+            width: 80%;
+            margin: 0 auto;
+        }
+        input, select {
+            height: 50px;
+            font-size: 1em;
+            padding: 0.5em;
+        }
+        #narracion {
+            background: #4270b5;
+            color: #fff;
+            border-radius: 10px;
+            padding: 0.5em;
+            width: 100%;
+        }
+        footer {
+            padding: 0.5em;
+            font-size: 0.8em;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
-
-<select name="pokemon1" id="pokemon1" class="listadoPokemones" required>
-  <option value="" selected>Seleccione un Pokemon</option> 
-</select>
-
-<select name="pokemon2" id="pokemon2" class="listadoPokemones" required>
-  <option value="" selected>Seleccione un Pokemon</option> 
-</select>
-<input type="button" value="Pelear">
-
-<script type="text/javascript" src="assets/js/main.js"></script>    
+    <header>
+        <img id="logo" src="assets/img/pokemon.png" alt="Pokémon!" title="Pokémon!">
+    </header>
+    <table>
+        <tr>
+            <td colspan="2">
+                <img class="coach" src="assets/img/ash.png" alt="Ash">
+            </td>
+            <td colspan="2">
+                <img class="coach" src="assets/img/brock.png" alt="Brock">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="Pelear" onclick="ordenarAtaque('Ash')">
+            </td>
+            <td>
+                <select name="pokemon1" id="pokemon1" class="listadoPokemones" required>
+                  <option value="" selected>Elige un Pokemon</option> 
+                </select>
+            </td>
+            <td>
+                <select name="pokemon2" id="pokemon2" class="listadoPokemones" required>
+                  <option value="" selected>Elige un Pokemon</option> 
+                </select>
+            </td>
+            <td>
+                <input type="button" value="Pelear" onclick="ordenarAtaque('Brock')">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4"><p id="narracion"></p></td>
+        </tr>
+    </table>
+    <footer>
+        <p><strong>Realizado por:</strong> Vanessa García Yara - @vanegarciay - Copyleft(c)</p>
+        <p>Todos las imágenes son propiedad de los creadores de Pokémon. Su uso en este desarrollo es para fines académicos y sin ánimo de lucro.</p>
+    </footer>
+    <script type="text/javascript" src="assets/js/main.js"></script>    
 </body>
 </html>
